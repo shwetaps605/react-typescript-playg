@@ -15,6 +15,7 @@ const App = () => {
     }
 
     const observer:any = useRef();
+    
     const lastBookElementRef = useCallback((node: HTMLDivElement) => {
         if(loading) return
         if(observer.current) {
@@ -24,7 +25,6 @@ const App = () => {
             if(entries[0].isIntersecting && hasMore) {
                 console.log("Visible")
                 setPageNumber(prev => prev +1);
-
             }
         })
         if(node) observer.current.observe(node)
