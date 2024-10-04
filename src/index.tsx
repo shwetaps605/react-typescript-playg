@@ -15,7 +15,7 @@ const App = () => {
     }
 
     const observer:any = useRef();
-    
+
     const lastBookElementRef = useCallback((node: HTMLDivElement) => {
         if(loading) return
         if(observer.current) {
@@ -46,7 +46,7 @@ const App = () => {
             })
         }
         <div>{loading &&  'Loading...'}</div>
-        <div>{error && 'ERROR OCCURED SOMEWHERE'}</div>
+        <div>{error && 'ERROR'}</div>
         {/* <Parent/> */}
     </div>
 }
